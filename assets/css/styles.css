@@ -297,14 +297,18 @@ img {
   color: var(--first-color-alt);
 }
 
-.home__blob{
-  width: 200px;
+.home__blob {
+  width: 260px;
+  height: 240px; /* Ajouter la hauteur pour bien cadrer l'image dans l'élément SVG */
   fill: var(--first-color);
 }
 
-.home__blob-img{
-  width: 200px;
+.home__blob-img {
+  width: 100%; /* Utiliser 100% pour l'adapter à la taille du SVG */
+  height: 100%;
+  object-fit: cover; /* Permet d'assurer que l'image occupe bien toute la surface sans déformer son aspect */
 }
+
 
 .home__data{
   grid-column: 1/3;
@@ -535,7 +539,7 @@ img {
 }
 
 .skills__jquery {
-  width: 55%;
+  width: 60%;
 }
 
 .skills__bootstrap {
@@ -543,19 +547,16 @@ img {
 }
 
 .skills__php {
-  width: 80%;
-}
-
-.skills__laravel {
   width: 70%;
 }
+
+
 
 .skills__springboot {
-  width: 70%;
+  width: 80%;
 }
-
-.skills__restfulapi {
-  width: 70%;
+.skills__nodejs{
+  width: 75%;
 }
 .skills__nestjs{
   width: 50%;
@@ -567,6 +568,7 @@ img {
 .skills__unit {
   width: 60%;
 }
+
 
 .skills__automation {
   width: 45%;
@@ -796,11 +798,15 @@ img {
   padding: 0 1.5rem;
 }
 
-.portfolio__img{
-  width: 265px;
-  border-radius: .5rem;
+.portfolio__img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+  transition: transform 0.3s ease;
   justify-self: center;
 }
+
 
 .portfolio__title{
   font-size: var(--h3-font-size);
